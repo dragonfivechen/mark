@@ -34,7 +34,7 @@ if ($.isNode()) {
 
 const JD_API_HOST = `https://api.m.jd.com/client.action`;
 message = ""
-$.shareuuid = "7d6b4dfb043a4ff28835daec3ee19a24"
+$.shareuuid = "8cec00a4917e4af6ae49f8f4f9e7b58d"
     !(async () => {
         if (!cookiesArr[0]) {
             $.msg($.name, '【提示】请先获取cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/', {
@@ -98,10 +98,10 @@ $.shareuuid = "7d6b4dfb043a4ff28835daec3ee19a24"
                     for (k = 0; k < $.drawchance; k++) {
                         await draw()
                     }
-                    let exchanges =Math.floor($.foodNum/10000)
-                    console.log(`可兑换 ${exchanges} 次 100京🐶`) 
+                    let exchanges =Math.floor($.foodNum/3000)
+                    console.log(`可兑换 ${exchanges} 次 50京🐶`) 
                     for(q = 0;q<exchanges && Exchange;q++){
-                    await exchange(16)    //16是100豆，14是50豆
+                    await exchange(14)    //16是100豆
                     }
                     await getinfo()                     
                     if(!Exchange){console.log("你 默认 不兑换东西,请自行进去活动兑换")}                    
